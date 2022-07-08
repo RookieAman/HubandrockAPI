@@ -6,6 +6,7 @@ var port = require('./config/config').port || 3050;
 var passport = require('passport');
 var routes = require('./routes').router;
 var environment = require('./config/config').environment;
+var fs = require("fs");
 //controllers loader
 
 
