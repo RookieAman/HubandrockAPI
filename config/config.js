@@ -10,6 +10,6 @@ exports.delimiter = "-3024J11-";
 exports.environment = "development";
 exports.elements_display = 12;
 exports.elements_premium = 6;
-exports.destination_images = "/Users/ferranmaso/hubandrock/cenobify-api";
+exports.destination_images = "/home/HRUploads";
 exports.prefix_table = "_";
 exports.port = 1521;
