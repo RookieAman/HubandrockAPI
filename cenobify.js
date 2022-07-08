@@ -18,6 +18,17 @@ var whiteListTest = ["http://127.0.0.1", "http://127.0.0.1:4200", "http://localh
 
 var publicURLList = ["image"]
 
+var https = require("https");
+var server = https.createServer(
+  {
+    key: fs.readFileSync("/etc/letsencrypt/live/hubandrock.com/privkey.pem"),
+    cert: fs.readFileSync("/etc/letsencrypt/live/hubandrock.com/cert.pem"),
+    ca: fs.readFileSync("/etc/letsencrypt/live/hubandrock.com/chain.pem"),
+    requestCert: false,
+    rejectUnauthorized: false,
+  },
+  app
+);
 
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
@@ -35,5 +46,5 @@ console.log("registro")
 app.use('/', routes);
 
 // Start the server
-app.listen(port);
+server.listen(port);
 console.log('Add petition on port ' + port);
