@@ -7,7 +7,7 @@ var pool_cenobi_min = mysql.createPool({
         port: '3306',
         user: 'root',
         password: 'V#f,7F6c%f@9',
-        database: 'hubnrock',
+        database: 'hubandrock',
         debug: 'false',
         dateStrings: true,
         multipleStatements: true
